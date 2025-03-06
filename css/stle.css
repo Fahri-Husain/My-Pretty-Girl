@@ -142,13 +142,13 @@ body {
 /* About Section */
 .about,
 .koleksifoto,
-.Perjalanan {
+.menu {
   padding: 7rem 7% 1.4rem;
 }
 
 .about h2,
 .koleksifoto h2,
-.Perjalanan h2 {
+.menu h2 {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 3rem;
@@ -158,7 +158,7 @@ body {
 
 .about h2 span,
 .koleksifoto h2 span,
-.Perjalanan h2 span {
+.menu h2 span {
   color: rgb(0, 0, 0);
   font-style: italic;
 }
@@ -224,6 +224,39 @@ body {
   line-height: 1.6;
 }
 
+.menu .row {
+  display: flex;
+  color: rgb(0, 0, 0);
+}
+
+.menu .row .menu-img,
+.menu-img2 {
+  flex: 1 1 45rem;
+  padding-top: 3rem;
+}
+
+.menu .row .menu-img img,
+.menu-img2 img {
+  width: 100%;
+  border-radius: 5rem;
+}
+
+.menu .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.menu .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.menu .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
 /* slider foto */
 * {
   margin: 0;
@@ -237,7 +270,7 @@ body {
   margin: auto;
   position: relative;
   overflow: hidden;
-  padding-top: 2rem;
+  padding-top: 5rem;
 }
 
 .slides {
@@ -273,11 +306,10 @@ body {
 
 /* koleksi foto */
 .koleksifoto h2,
-.Perjalanan h2 {
+.menu h2 {
   margin-bottom: 1rem;
 }
-.koleksifoto p,
-.Perjalanan p {
+.koleksifoto p {
   text-align: center;
   max-width: 30rem;
   margin: auto;
@@ -449,10 +481,33 @@ footer .credit a {
   .koleksifoto p {
     font-size: 1.2rem;
   }
+
+  .menu .row {
+    flex-wrap: wrap;
+  }
+
+  .menu .row .menu-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .menu .row .content {
+    padding: 0;
+  }
+
+  .menu .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .menu .row .content p {
+    font-size: 1.6rem;
+  }
 }
 /* Mobile Phone */
-@media (max-width: 720px) {
+@media (max-width: 450px) {
   html {
-    font-size: 50%;
+    font-size: 55%;
   }
 }
