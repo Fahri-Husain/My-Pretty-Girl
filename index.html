@@ -15,6 +15,7 @@
 
     <!-- Feather icons -->
     <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://fontawesome.com/icons"></script>
 
     <!-- My Style-->
     <link
@@ -26,15 +27,11 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
   </head>
   <body>
@@ -52,11 +49,14 @@
       </div>
 
       <div class="navbar-extra">
-        <a href="#" id="search"
-          ><i class="fa fa-heart-o" style="font-size: 30px"></i
+        <a
+          href="https://www.youtube.com/watch?v=rtOvBOTyX00"
+          target="_blank"
+          id="search"
+          ><i class="fa-regular fa-heart" style="font-size: 30px"></i
         ></a>
         <a href="#" id="shopping-cart"
-          ><i class="fa fa-github-alt" style="font-size: 30px"></i
+          ><i class="fa-brands fa-github-alt" style="font-size: 30px"></i
         ></a>
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
@@ -72,6 +72,8 @@
         </p>
       </main>
     </section>
+    <!-- Hero section End -->
+
     <!-- Slider -->
     <div class="slider">
       <div class="slides">
@@ -86,8 +88,6 @@
       </button>
       <button class="nav-button next" onclick="changeSlide(1)">&#10095;</button>
     </div>
-
-    <!-- Hero section End -->
 
     <!-- About Section Start -->
     <section id="about" class="about">
@@ -293,7 +293,6 @@
             imut dan lucu sampai saat ini suara imutnya masih terngiang ngiang
             di kepalaku.
           </p>
-
           <div class="menu-img2">
             <img src="img/tele4.png" alt="Perjalanan Kita" />
             <img src="img/tele3.png" alt="Perjalanan Kita" />
@@ -411,8 +410,8 @@
               cuman bisa beliin telor gulung trs di Indomart but aku ga ada
               capenya untuk bilang kalo kamu itu gemesin. Ada moment ada anak
               kecil dateng minta di belikan sesuatu tapi aku gabawa uang lebih
-              jadinya kita kasih telor gulungnya aja 2 dann kata anak kecil juga bilang
-              kalo kamu itu cantik, anak kecil belum berdosa dan ga berbohong. Kita
+              jadinya kita kasih telor gulungnya aja 2 dann kata anak kecil juga
+              kamu itu cantik, anak kecil belum berdosa dan ga berbohong. Kita
               di pertemuan ke tiga ini hampir saja membuat mu tidur diluar karna
               gerbang sudah di gembok, aku udhh sekuat tenaga supaya tidak lebih
               tapii jam dirumah mu itu kelebihan jadinya ortumu menganggapnya
@@ -452,8 +451,11 @@
         <a
           href="https://www.tiktok.com/@catlyse_?_t=ZS-8uSbTx7Fdns&_r=1"
           target="_blank"
-          ><i data-feather="globe"></i
-        ></a>
+          ><i
+            class="fa-brands fa-tiktok fa-2x"
+            style="position: relative; top: -3.5px"
+          ></i>
+        </a>
       </div>
 
       <div class="links">
@@ -470,6 +472,59 @@
       </div>
     </footer>
     <!-- footer section end -->
+
+    <!-- cinnamorol -->
+
+    <style>
+      .cinnamoroll {
+        width: 150px;
+        position: fixed; /* Tetap di layar saat scroll */
+        top: 20%; /* Tengah secara vertikal */
+        left: 20px; /* Posisikan di kanan */
+        transform: translateY(-50%); /* Agar tetap tengah */
+        animation: fly 3s infinite ease-in-out;
+      }
+
+      @keyframes fly {
+        0%,
+        100% {
+          transform: translateY(-50%);
+        }
+        50% {
+          transform: translateY(-60%); /* Gerakan naik turun */
+        }
+      }
+    </style>
+    <img
+      class="cinnamoroll"
+      src="../Website/img/morol.png"
+      alt="Cinnamoroll Terbang"
+    />
+    <style>
+      .cinnamoroll2 {
+        width: 150px;
+        position: fixed; /* Tetap di layar saat scroll */
+        bottom: -15%; /* Tengah secara vertikal */
+        right: 20px; /* Posisikan di kanan */
+        transform: translateY(-50%); /* Agar tetap tengah */
+        animation: fly 3s infinite ease-in-out;
+      }
+
+      @keyframes fly {
+        0%,
+        100% {
+          transform: translateY(-50%);
+        }
+        50% {
+          transform: translateY(-60%); /* Gerakan naik turun */
+        }
+      }
+    </style>
+    <img
+      class="cinnamoroll2"
+      src="../Website/img/morol2.png"
+      alt="Cinnamoroll Terbang"
+    />
 
     <!-- Feather Icons -->
     <script>
