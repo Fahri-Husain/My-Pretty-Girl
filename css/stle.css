@@ -266,8 +266,9 @@ body {
 }
 
 .slider {
-  width: 50%;
+  width: 100%;
   max-width: 2000px;
+  height: 250px;
   margin: auto;
   position: relative;
   overflow: hidden;
@@ -281,7 +282,7 @@ body {
 
 .slides img {
   width: 100%;
-  height: auto;
+  height: 200%;
   border-radius: 5em;
   object-fit: cover;
 }
