@@ -91,7 +91,7 @@ body {
   min-height: 60vh;
   display: flex;
   align-items: center;
-  background-image: url("../img/felicia.jpg");
+  background-image: url("../img/hewan.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -357,7 +357,7 @@ body {
   position: center;
   white-space: nowrap;
   will-change: transform;
-  animation: runText 13s linear infinite;
+  animation: runText 15s linear infinite;
 }
 
 @keyframes runText {
@@ -510,6 +510,6 @@ footer .credit a {
 /* Mobile Phone */
 @media screen and (min-width: 320px) and (max-width: 480px) {
   html {
-    font-size: 55%;
+    font-size: 40%;
   }
 }
