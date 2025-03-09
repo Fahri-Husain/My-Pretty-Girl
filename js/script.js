@@ -15,18 +15,17 @@ document.addEventListener("click", function (e) {
 });
 
 // slide foto
-let currentSlide = 0;
+document.addEventListener("DOMContentLoaded", function () {
+  let index = 0;
+  const slides = document.querySelectorAll(".slides img");
+  const totalSlides = slides.length;
 
-function changeSlide(direction) {
-  const slides = document.querySelector(".slides");
-  const totalSlides = slides.children.length;
-
-  currentSlide += direction;
-  if (currentSlide < 0) {
-    currentSlide = totalSlides - 1;
-  } else if (currentSlide >= totalSlides) {
-    currentSlide = 0;
+  function nextSlide() {
+    index = (index + 1) % totalSlides;
+    document.querySelector(".slides").style.transform = `translateX(-${
+      index * 100
+    }%)`;
   }
 
-  slides.style.transform = `translateX(${-currentSlide * 100}%)`;
-}
+  setInterval(nextSlide, 3000); // Pindah setiap 3 detik
+});
