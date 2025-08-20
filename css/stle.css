@@ -269,7 +269,7 @@ body {
 .slider {
   width: 100%;
   max-width: 2000px;
-  height: 250px;
+  height: 100vh; /* penuh layar */
   margin: auto;
   position: relative;
   overflow: hidden;
@@ -278,15 +278,15 @@ body {
 
 .slides {
   display: flex;
-  transition: transform 0.5s ease-in-out;
-  touch-action: pan-y; /* Biar bisa geser tanpa gangguan */
+  height: 100%; /* ✅ penting, biar anaknya ikut penuh */
 }
 
 .slides img {
   width: 100%;
-  height: 200%;
-  border-radius: 5em;
-  object-fit: cover;
+  height: 100%;   /* ✅ isi penuh container */
+  border-radius: 2rem;
+  object-fit: cover; 
+  flex-shrink: 0;  /* ✅ jangan mengecil */
 }
 
 .nav-button {
@@ -543,39 +543,39 @@ footer .credit a {
 
   /* hilangkan kemungkinan row flex side-by-side */
   .about .row {
-    display: block;
-    margin: 0; /* hilangin auto margin */
-    padding: 0; /* biar full ke kiri-kanan */
-    width: 100%;
-    text-align: center;
-  }
+  display: block;
+  margin: 0; /* hilangin auto margin */
+  padding: 0; /* biar full ke kiri-kanan */
+  width: 100%;
+  text-align: center;
+}
 
-  .about .row .about-img img {
-    width: 100%; /* full kiri-kanan */
-    height: 900px; /* tinggi default di laptop */
-    object-fit: cover; /* biar crop rapi */
-    object-position: 50% 40%;
-    border-radius: 100px; /* tambahin lengkung biar sama kayak versi HP */
-    display: block; /* pastikan nggak ada inline space */
-  }
+.about .row .about-img img {
+  width: 100%; /* full kiri-kanan */
+  height: 900px; /* tinggi default di laptop */
+  object-fit: cover; /* biar crop rapi */
+  object-position: 50% 40%;
+  border-radius: 100px; /* tambahin lengkung biar sama kayak versi HP */
+  display: block; /* pastikan nggak ada inline space */
+}
 
-  .about .row .content {
-    width: 100%;
-    margin: 20px 0 0;
-    padding: 0 10px; /* kasih sedikit padding biar teks gak nempel banget */
-    text-align: justify;
-  }
+.about .row .content {
+  width: 100%;
+  margin: 20px 0 0;
+  padding: 0 10px; /* kasih sedikit padding biar teks gak nempel banget */
+  text-align: justify;
+}
 }
 
 @media (max-width: 768px) {
   .slider {
-    max-width: 100%; /* Biar fleksibel di layar HP */
-    height: auto; /* Biar tinggi menyesuaikan */
+    height: 60vh;  /* ✅ biar nggak terlalu tinggi di HP */
+    padding-top: 2rem;
   }
 
   .slides img {
-    width: 100vw; /* Pastikan gambar penuh */
-    height: auto;
+    height: 100%; /* tetap isi penuh */
+    border-radius: 1rem;
   }
 }
 
@@ -584,5 +584,9 @@ footer .credit a {
   html {
     font-size: 45%;
   }
+ .slider {
+    height: 50vh; /* layar kecil lebih pendek */
+  }
 }
+
 
