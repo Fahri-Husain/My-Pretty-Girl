@@ -509,6 +509,62 @@ footer .credit a {
   .menu .row .content p {
     font-size: 1.6rem;
   }
+
+  slider {
+    height: 60vh; /* ✅ biar nggak terlalu tinggi di HP */
+    padding-top: 2rem;
+  }
+
+  .slides img {
+    height: 100%; /* tetap isi penuh */
+    border-radius: 1rem;
+  }
+}
+
+/* Untuk layar besar (laptop/desktop) */
+@media screen and (min-width: 992px) {
+  .slider {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .slider .slides img {
+    width: 100%; /* supaya foto melebar penuh */
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* pastikan section about turun */
+  #about {
+    display: block;
+    margin-top: 20px;
+  }
+
+  /* hilangkan kemungkinan row flex side-by-side */
+  .about .row {
+    display: block;
+    margin: 0; /* hilangin auto margin */
+    padding: 0; /* biar full ke kiri-kanan */
+    width: 100%;
+    text-align: center;
+  }
+
+  .about .row .about-img img {
+    width: 100%; /* full kiri-kanan */
+    height: 900px; /* tinggi default di laptop */
+    object-fit: cover; /* biar crop rapi */
+    object-position: 50% 40%;
+    border-radius: 100px; /* tambahin lengkung biar sama kayak versi HP */
+    display: block; /* pastikan nggak ada inline space */
+  }
+
+  .about .row .content {
+    width: 100%;
+    margin: 20px 0 0;
+    padding: 0 10px; /* kasih sedikit padding biar teks gak nempel banget */
+    text-align: justify;
+  }
 }
 
 @media (max-width: 768px) {
@@ -529,3 +585,4 @@ footer .credit a {
     font-size: 45%;
   }
 }
+
